@@ -2,18 +2,11 @@
 
 import React, { useState } from "react";
 
-export default function RevealButton(props: {
-  catName: string;
-  children: React.ReactNode;
-}) {
+export default function RevealButton(props: { children: React.ReactNode }) {
   const [revealed, setRevealed] = useState(false);
 
   if (revealed) {
-    return (
-      <div>
-        <h1 className="text-4xl font-bold">{props.catName}</h1>
-      </div>
-    );
+    return props.children;
   }
 
   return (

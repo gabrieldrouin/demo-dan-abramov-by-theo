@@ -9,8 +9,8 @@ export default async function CatGenerator() {
 
   return (
     <>
-      <RevealButton catName={randomCat}>
-        <div>Child Component</div>
+      <RevealButton>
+        <h1 className="text-4xl font-bold">{randomCat}</h1>
       </RevealButton>
     </>
   );
