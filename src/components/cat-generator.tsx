@@ -1,5 +1,6 @@
 import { readFile } from "fs/promises";
 import RevealButton from "./reveal-button";
+import Counter from "./counter";
 
 export default async function CatGenerator() {
   const allCatsNames = await readFile("src/api/cats.txt", "utf8");
@@ -10,7 +11,7 @@ export default async function CatGenerator() {
   return (
     <>
       <RevealButton>
-        <h1 className="text-4xl font-bold">{randomCat}</h1>
+        <Counter />
       </RevealButton>
     </>
   );
