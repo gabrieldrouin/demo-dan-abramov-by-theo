@@ -2,7 +2,10 @@
 
 import React, { useState } from "react";
 
-export default function RevealButton(props: { catName: string }) {
+export default function RevealButton(props: {
+  catName: string;
+  children: React.ReactNode;
+}) {
   const [revealed, setRevealed] = useState(false);
 
   if (revealed) {
